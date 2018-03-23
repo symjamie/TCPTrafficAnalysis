@@ -39,17 +39,21 @@ Besides the above information for each TCP connection, your program needs to pro
 • the number of complete TCP connections observed in the trace
 
 • Regarding the complete TCP connections you observed:
+	
 	– the minimum, mean, and maximum time durations of the complete TCP connections
+	
 	– the minimum, mean, and maximum RTT (Round Trip Time) values of the complete TCP connections
+	
 	– the minimum, mean, and maximum number of packets (both directions) sent on the complete TCP connections
+	
 	– the minimum, mean, and maximum receive window sizes (both sides) of the complete TCP connections.
 
 --------------------------------------------------------------------------
 
 Error handlings:
-	1. Output an error message if the filename is not provided properly;
-	2. Output an error message if the file can not be opened;
-	3. Output an error message if the file can not be read as a pcap file.
+	• Output an error message if the filename is not provided properly;
+	• Output an error message if the file can not be opened;
+	• Output an error message if the file can not be read as a pcap file.
 
 --------------------------------------------------------------------------
 
