@@ -51,8 +51,11 @@ Besides the above information for each TCP connection, your program needs to pro
 --------------------------------------------------------------------------
 
 Error handlings:
+	
 	• Output an error message if the filename is not provided properly;
+	
 	• Output an error message if the file can not be opened;
+	
 	• Output an error message if the file can not be read as a pcap file.
 
 --------------------------------------------------------------------------
