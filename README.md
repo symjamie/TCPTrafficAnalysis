@@ -1,7 +1,7 @@
 # TCPTrafficAnalysis
-# Author:  Yiming Sun
-# Purpose:  CSc 361 - Assignment 2
-# Date:  Feb 24, 2018
+Author:  Yiming Sun
+Purpose:  CSc 361 - Assignment 2
+Date:  Feb 24, 2018
 
 --------------------------------------------------------------------------
 
