@@ -23,6 +23,7 @@ A valid trace file in the argument line. (e.g. run the program with "./python3 t
 --------------------------------------------------------------------------
 
 Output: 
+(This field is cited from the assignment description by University of Victoria.)
 
 The summary information to be computed for each TCP connection includes:
 
