@@ -1,8 +1,6 @@
 # TCPTrafficAnalysis
 Author:  Yiming Sun
 
-Purpose:  CSc 361 - Assignment 2
-
 Date:  Feb 24, 2018
 
 
@@ -24,7 +22,7 @@ A valid trace file in the argument line. (e.g. run the program with "./python3 t
 
 --------------------------------------------------------------------------
 
-Output:
+Output: 
 
 The summary information to be computed for each TCP connection includes:
 
