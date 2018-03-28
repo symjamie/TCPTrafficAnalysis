@@ -1,5 +1,4 @@
 # Author:  Yiming Sun
-# Purpose:  CSc 361 - Assignment 2
 # Date:  Feb 24, 2018
 # Last modified: Mar 4, 2018
 
@@ -48,7 +47,7 @@ def readPcap(file):
 		dst = socket.inet_ntoa(ip.dst)
 		dport = tcp.dport
 		# Create new connection when a packet with only SYN flag found.
-		if tcp.flags == 2 and not (src, sport, dst, dport) in conn:
+		if (not (src, sport, dst, dport) in conn) and (not (dst, dport, src, sport) in conn):
 			conn[(src, sport, dst, dport)] = connection()
 		size = ip.len - (ip.hl + tcp.off) * 4 # Size of TCP payload (exclude sizes of IP and TCP header).
 		if (src, sport, dst, dport) in conn: # Sending packet.
@@ -89,7 +88,7 @@ def analyzeData():
 		if rsted == True:
 			rstConns = rstConns + 1
 		# Analyze completed connection.
-		if c.F > 0: # Also, c.S >= 2 (3-way handshake) if the connection has any FIN packet.
+		if c.S > 0 and c.F > 0: # The connection is completed.
 			# Calculate duration.
 			compConns = compConns + 1
 			c.dur = c.end - c.pktsSent[0][0]
@@ -135,7 +134,7 @@ def printSummary():
 		print("Source Port: %d" % ID[1])
 		print("Destination Port: %d" % ID[3])
 		print("Status: S{}F{}".format(c.S, c.F))
-		if c.F > 0:
+		if c.S > 0 and c.F > 0:
 			# Compute relative start and end time of each connection.
 			print("Start time: %.4f s" % (c.pktsSent[0][0] - absStart))
 			print("End Time: %.4f s" % (c.end - absStart))
