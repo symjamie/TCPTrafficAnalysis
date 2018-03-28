@@ -18,7 +18,9 @@ Execution environment:
 
 Input:
 
-A valid trace file in the argument line. (e.g. run the program with "./python3 tcp_traffic_analysis.py sample-capture-file").
+A valid .pcap trace file in the argument line. (e.g. run the program with "./python3 tcp_traffic_analysis.py sample-capture-file").
+
+The trace file must only contain TCP packets (use Wireshark to filter TCP).
 
 --------------------------------------------------------------------------
 
